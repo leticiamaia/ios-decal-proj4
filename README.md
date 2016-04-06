@@ -38,19 +38,21 @@ audios and documents (main page)
 top of the page to in order to search audios and documents by name.
 - They can select a sorting option in order to sort audios and documents.
 - If they click in an add button, a new view will appear. 
-- The user can choose to create a new text document by typing a text and choosing 
-a name for the new document.
+- The user can choose to create a new text document by typing a text and 
+choosing a name for the new document.
 - The user can click a button to select a file from the device to be uploaded.
-- The user can click a button to select a file from google drive to be uploaded.
-- For the two options above, the user can type in a text field to change the name
-of the document that will be uploaded.
+- The user can click a button to select a file from google drive to be 
+uploaded.
+- For the two options above, the user can type in a text field to change the
+ name of the document that will be uploaded.
 - The user can click cancel and go back to the documents list.
 - The user can click save, and then a new view will appear.
-- In the new view, the user can choose the name of the audio, the gender of the voice
-and can click to open document text selection.
-- Text selection?
-- The user can click cancel, and the new document will appear in the documents/audios
-list, but no audio will be made.
+- In the new view, the user can choose the name of the audio, the gender of the
+ voice and can click to open document text selection.
+- If document text selection is chosen, the text of the file will appear, and 
+the user can edit it to what they want to be transformed. 
+- The user can click cancel, and the new document will appear in the 
+documents/audios list, but no audio will be made.
 - The user can click convert, and the new document will appear in the 
 documents/audios list, along with a new audio.
 - There will be a side menu with options to sign out and go to the main page
