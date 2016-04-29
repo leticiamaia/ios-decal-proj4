@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92E5E8061CD33F13004AC0EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8051CD33F13004AC0EF /* AppDelegate.swift */; };
+		92E5E8081CD33F13004AC0EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8071CD33F13004AC0EF /* ViewController.swift */; };
+		92E5E80B1CD33F13004AC0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E5E8091CD33F13004AC0EF /* Main.storyboard */; };
+		92E5E80D1CD33F13004AC0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E5E80C1CD33F13004AC0EF /* Assets.xcassets */; };
+		92E5E8101CD33F13004AC0EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E5E80E1CD33F13004AC0EF /* LaunchScreen.storyboard */; };
+		92E5E81B1CD33F13004AC0EF /* DitangoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E81A1CD33F13004AC0EF /* DitangoTests.swift */; };
+		92E5E8261CD33F13004AC0EF /* DitangoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8251CD33F13004AC0EF /* DitangoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92E5E8171CD33F13004AC0EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E5E7FA1CD33F13004AC0EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E5E8011CD33F13004AC0EF;
+			remoteInfo = Ditango;
+		};
+		92E5E8221CD33F13004AC0EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E5E7FA1CD33F13004AC0EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E5E8011CD33F13004AC0EF;
+			remoteInfo = Ditango;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92E5E8021CD33F13004AC0EF /* Ditango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ditango.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E5E8051CD33F13004AC0EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92E5E8071CD33F13004AC0EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92E5E80A1CD33F13004AC0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92E5E80C1CD33F13004AC0EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92E5E80F1CD33F13004AC0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92E5E8111CD33F13004AC0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E5E8161CD33F13004AC0EF /* DitangoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DitangoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E5E81A1CD33F13004AC0EF /* DitangoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DitangoTests.swift; sourceTree = "<group>"; };
+		92E5E81C1CD33F13004AC0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E5E8211CD33F13004AC0EF /* DitangoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DitangoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E5E8251CD33F13004AC0EF /* DitangoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DitangoUITests.swift; sourceTree = "<group>"; };
+		92E5E8271CD33F13004AC0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92E5E7FF1CD33F13004AC0EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E5E8131CD33F13004AC0EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E5E81E1CD33F13004AC0EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92E5E7F91CD33F13004AC0EF = {
+			isa = PBXGroup;
+			children = (
+				92E5E8041CD33F13004AC0EF /* Ditango */,
+				92E5E8191CD33F13004AC0EF /* DitangoTests */,
+				92E5E8241CD33F13004AC0EF /* DitangoUITests */,
+				92E5E8031CD33F13004AC0EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92E5E8031CD33F13004AC0EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92E5E8021CD33F13004AC0EF /* Ditango.app */,
+				92E5E8161CD33F13004AC0EF /* DitangoTests.xctest */,
+				92E5E8211CD33F13004AC0EF /* DitangoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92E5E8041CD33F13004AC0EF /* Ditango */ = {
+			isa = PBXGroup;
+			children = (
+				92E5E8051CD33F13004AC0EF /* AppDelegate.swift */,
+				92E5E8071CD33F13004AC0EF /* ViewController.swift */,
+				92E5E8091CD33F13004AC0EF /* Main.storyboard */,
+				92E5E80C1CD33F13004AC0EF /* Assets.xcassets */,
+				92E5E80E1CD33F13004AC0EF /* LaunchScreen.storyboard */,
+				92E5E8111CD33F13004AC0EF /* Info.plist */,
+			);
+			path = Ditango;
+			sourceTree = "<group>";
+		};
+		92E5E8191CD33F13004AC0EF /* DitangoTests */ = {
+			isa = PBXGroup;
+			children = (
+				92E5E81A1CD33F13004AC0EF /* DitangoTests.swift */,
+				92E5E81C1CD33F13004AC0EF /* Info.plist */,
+			);
+			path = DitangoTests;
+			sourceTree = "<group>";
+		};
+		92E5E8241CD33F13004AC0EF /* DitangoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92E5E8251CD33F13004AC0EF /* DitangoUITests.swift */,
+				92E5E8271CD33F13004AC0EF /* Info.plist */,
+			);
+			path = DitangoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92E5E8011CD33F13004AC0EF /* Ditango */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E5E82A1CD33F13004AC0EF /* Build configuration list for PBXNativeTarget "Ditango" */;
+			buildPhases = (
+				92E5E7FE1CD33F13004AC0EF /* Sources */,
+				92E5E7FF1CD33F13004AC0EF /* Frameworks */,
+				92E5E8001CD33F13004AC0EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ditango;
+			productName = Ditango;
+			productReference = 92E5E8021CD33F13004AC0EF /* Ditango.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92E5E8151CD33F13004AC0EF /* DitangoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E5E82D1CD33F13004AC0EF /* Build configuration list for PBXNativeTarget "DitangoTests" */;
+			buildPhases = (
+				92E5E8121CD33F13004AC0EF /* Sources */,
+				92E5E8131CD33F13004AC0EF /* Frameworks */,
+				92E5E8141CD33F13004AC0EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92E5E8181CD33F13004AC0EF /* PBXTargetDependency */,
+			);
+			name = DitangoTests;
+			productName = DitangoTests;
+			productReference = 92E5E8161CD33F13004AC0EF /* DitangoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92E5E8201CD33F13004AC0EF /* DitangoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E5E8301CD33F13004AC0EF /* Build configuration list for PBXNativeTarget "DitangoUITests" */;
+			buildPhases = (
+				92E5E81D1CD33F13004AC0EF /* Sources */,
+				92E5E81E1CD33F13004AC0EF /* Frameworks */,
+				92E5E81F1CD33F13004AC0EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92E5E8231CD33F13004AC0EF /* PBXTargetDependency */,
+			);
+			name = DitangoUITests;
+			productName = DitangoUITests;
+			productReference = 92E5E8211CD33F13004AC0EF /* DitangoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92E5E7FA1CD33F13004AC0EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Leticia Maia";
+				TargetAttributes = {
+					92E5E8011CD33F13004AC0EF = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					92E5E8151CD33F13004AC0EF = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 92E5E8011CD33F13004AC0EF;
+					};
+					92E5E8201CD33F13004AC0EF = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 92E5E8011CD33F13004AC0EF;
+					};
+				};
+			};
+			buildConfigurationList = 92E5E7FD1CD33F13004AC0EF /* Build configuration list for PBXProject "Ditango" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92E5E7F91CD33F13004AC0EF;
+			productRefGroup = 92E5E8031CD33F13004AC0EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92E5E8011CD33F13004AC0EF /* Ditango */,
+				92E5E8151CD33F13004AC0EF /* DitangoTests */,
+				92E5E8201CD33F13004AC0EF /* DitangoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92E5E8001CD33F13004AC0EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E5E8101CD33F13004AC0EF /* LaunchScreen.storyboard in Resources */,
+				92E5E80D1CD33F13004AC0EF /* Assets.xcassets in Resources */,
+				92E5E80B1CD33F13004AC0EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E5E8141CD33F13004AC0EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E5E81F1CD33F13004AC0EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92E5E7FE1CD33F13004AC0EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E5E8081CD33F13004AC0EF /* ViewController.swift in Sources */,
+				92E5E8061CD33F13004AC0EF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E5E8121CD33F13004AC0EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E5E81B1CD33F13004AC0EF /* DitangoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E5E81D1CD33F13004AC0EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E5E8261CD33F13004AC0EF /* DitangoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92E5E8181CD33F13004AC0EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E5E8011CD33F13004AC0EF /* Ditango */;
+			targetProxy = 92E5E8171CD33F13004AC0EF /* PBXContainerItemProxy */;
+		};
+		92E5E8231CD33F13004AC0EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E5E8011CD33F13004AC0EF /* Ditango */;
+			targetProxy = 92E5E8221CD33F13004AC0EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92E5E8091CD33F13004AC0EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92E5E80A1CD33F13004AC0EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92E5E80E1CD33F13004AC0EF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92E5E80F1CD33F13004AC0EF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92E5E8281CD33F13004AC0EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92E5E8291CD33F13004AC0EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92E5E82B1CD33F13004AC0EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ditango/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leticia-Maia.Ditango";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		92E5E82C1CD33F13004AC0EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ditango/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leticia-Maia.Ditango";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		92E5E82E1CD33F13004AC0EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DitangoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leticia-Maia.DitangoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ditango.app/Ditango";
+			};
+			name = Debug;
+		};
+		92E5E82F1CD33F13004AC0EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DitangoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leticia-Maia.DitangoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ditango.app/Ditango";
+			};
+			name = Release;
+		};
+		92E5E8311CD33F13004AC0EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DitangoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leticia-Maia.DitangoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Ditango;
+			};
+			name = Debug;
+		};
+		92E5E8321CD33F13004AC0EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DitangoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leticia-Maia.DitangoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Ditango;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92E5E7FD1CD33F13004AC0EF /* Build configuration list for PBXProject "Ditango" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E5E8281CD33F13004AC0EF /* Debug */,
+				92E5E8291CD33F13004AC0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E5E82A1CD33F13004AC0EF /* Build configuration list for PBXNativeTarget "Ditango" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E5E82B1CD33F13004AC0EF /* Debug */,
+				92E5E82C1CD33F13004AC0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		92E5E82D1CD33F13004AC0EF /* Build configuration list for PBXNativeTarget "DitangoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E5E82E1CD33F13004AC0EF /* Debug */,
+				92E5E82F1CD33F13004AC0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		92E5E8301CD33F13004AC0EF /* Build configuration list for PBXNativeTarget "DitangoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E5E8311CD33F13004AC0EF /* Debug */,
+				92E5E8321CD33F13004AC0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92E5E7FA1CD33F13004AC0EF /* Project object */;
+}
