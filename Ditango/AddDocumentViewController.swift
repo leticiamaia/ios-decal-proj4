@@ -32,6 +32,10 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

@@ -121,7 +121,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Document" id="dal-to-wHw">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mfY-pF-dci"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mfY-pF-dci">
+                            <connections>
+                                <action selector="cancel:" destination="XXK-DD-Amo" id="Q6e-bJ-963"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="jtM-9o-KwP">
                             <connections>
                                 <action selector="saveDocumentAction:" destination="XXK-DD-Amo" id="dk0-hU-Gyh"/>
@@ -164,9 +168,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="qSk-xU-Igc"/>
-                    <connections>
-                        <outlet property="testLabel" destination="HdO-kK-jDV" id="Zoo-Ax-toI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWK-YB-ZuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,6 +294,6 @@
         <image name="play.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B17-02-Xf1"/>
+        <segue reference="9AT-79-sSD"/>
     </inferredMetricsTieBreakers>
 </document>
