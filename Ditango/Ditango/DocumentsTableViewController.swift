@@ -52,9 +52,11 @@ class DocumentsTableViewController: UITableViewController {
     }
     
     func setDocuments(newDocuments: [Document]) {
-        print(newDocuments)
-        self.documents = newDocuments
-        tableView.reloadData()
+        dispatch_async(dispatch_get_main_queue()) {
+            print(newDocuments)
+            self.documents = newDocuments
+            self.tableView.reloadData()
+        }
     }
     /*
     // Override to support conditional editing of the table view.

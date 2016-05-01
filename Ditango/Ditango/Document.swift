@@ -11,10 +11,12 @@ import Foundation
 class Document {
     var id : Int64!
     var filename : String!
+    var audio: Audio?
     
-    init (id: Int64, filename : String) {
-        self.id = id;
+    init (id: Int64, filename : String, audio: Audio?) {
+        self.id = id
         self.filename = filename
+        self.audio = audio
     }
     
 }

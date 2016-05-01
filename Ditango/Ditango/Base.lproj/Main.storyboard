@@ -40,7 +40,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Document Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wD-cB-Pm3">
-                                            <rect key="frame" x="20" y="8" width="129" height="21"/>
+                                            <rect key="frame" x="20" y="8" width="567" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -58,17 +58,110 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Audios" id="uQ0-sd-pET">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EyD-vl-JxK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EyD-vl-JxK">
+                            <connections>
+                                <segue destination="73y-JF-FzU" kind="presentation" id="741-C6-xK5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frZ-Ml-uND" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826" y="315"/>
+            <point key="canvasLocation" x="1818" y="315"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Add Document-->
+        <scene sceneID="XCW-dh-2FK">
+            <objects>
+                <viewController id="XXK-DD-Amo" customClass="AddDocumentViewController" customModule="Ditango" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZM3-ce-rxj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mm8-jd-MIh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DQb-SG-PRY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wnr-1U-ceF">
+                                <rect key="frame" x="147" y="96" width="198" height="58"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2EQ-D7-0Vv">
+                                <rect key="frame" x="20" y="120" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEc-CC-Cmy">
+                                <rect key="frame" x="29" y="218" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPI-EG-Gg6">
+                                <rect key="frame" x="122" y="209" width="243" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peY-FG-SqC">
+                                <rect key="frame" x="29" y="289" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Tt-el-bwz">
+                                <rect key="frame" x="98" y="277" width="391" height="156"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add Document" id="dal-to-wHw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mfY-pF-dci"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jtM-9o-KwP">
+                            <connections>
+                                <segue destination="Wc6-G2-nnA" kind="presentation" id="Rh6-aa-Ohg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="fileNameTextField" destination="OPI-EG-Gg6" id="LPC-dM-1E7"/>
+                        <outlet property="inputTextView" destination="6Tt-el-bwz" id="Ih6-M1-SNv"/>
+                        <outlet property="languagePickerView" destination="Wnr-1U-ceF" id="rWe-bw-qAk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXm-D1-FSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2614" y="315"/>
+        </scene>
+        <!--Transform to Audio-->
+        <scene sceneID="Vkx-zk-Hus">
+            <objects>
+                <viewController id="mYm-Mv-8lW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fpr-3y-MYq"/>
+                        <viewControllerLayoutGuide type="bottom" id="zZV-D7-OHt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hlw-kV-tVV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Transform to Audio" id="FlN-5z-P2y">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QlP-jf-njH"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="DHw-MH-APk"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTR-sn-H10" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3352" y="315"/>
+        </scene>
+        <!--DocumentsListNavigationController-->
         <scene sceneID="npa-Ua-UnX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fTC-vI-x0o" sceneMemberID="viewController">
+                <navigationController title="DocumentsListNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="fTC-vI-x0o" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bSF-Vn-sy9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -82,6 +175,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sa6-fd-Mkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1826" y="-493"/>
+        </scene>
+        <!--AddDocumentNaviagtionController-->
+        <scene sceneID="jeo-4z-KJ3">
+            <objects>
+                <navigationController title="AddDocumentNaviagtionController" automaticallyAdjustsScrollViewInsets="NO" id="73y-JF-FzU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DYK-FT-8fL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XXK-DD-Amo" kind="relationship" relationship="rootViewController" id="Zff-u2-8TN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7YM-4V-XbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="-493"/>
+        </scene>
+        <!--TransformAudio-->
+        <scene sceneID="PE9-Eq-oOS">
+            <objects>
+                <navigationController title="TransformAudio" automaticallyAdjustsScrollViewInsets="NO" id="Wc6-G2-nnA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2DS-mF-0G0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mYm-Mv-8lW" kind="relationship" relationship="rootViewController" id="DVQ-Sg-NLe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqG-qw-hWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3364" y="-474"/>
         </scene>
     </scenes>
 </document>

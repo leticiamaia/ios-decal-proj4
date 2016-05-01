@@ -42,7 +42,14 @@ class DitangoAPI {
                 for dict: NSDictionary in documentsInfoArray {
                     let id = (dict.valueForKey("id") as! NSNumber).longLongValue
                     let filename = dict.valueForKey("fileName") as! String
-                    let document = Document(id: id, filename: filename)
+                    let audiosArray = dict.valueForKey("audioDocs") as! NSArray
+                    var audio: Audio?
+                    if(audiosArray.count > 0) {
+                        let audioID = (audiosArray[0].valueForKey("id") as! NSNumber).longLongValue
+                        let audioFilename = audiosArray[0].valueForKey("fileName") as! String
+                        audio = Audio(id: audioID, filename: audioFilename)
+                    }
+                    let document = Document(id: id, filename: filename, audio:audio)
                     documentsArray.append(document)
                 }
                completion(documentsArray)

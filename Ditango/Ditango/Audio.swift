@@ -10,4 +10,10 @@ import Foundation
 
 class Audio {
     var id : Int64!
+    var filename : String!
+    
+    init (id: Int64, filename : String) {
+        self.id = id;
+        self.filename = filename
+    }
 }
