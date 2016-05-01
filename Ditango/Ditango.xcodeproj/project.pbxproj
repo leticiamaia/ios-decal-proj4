@@ -10,6 +10,8 @@
 		925837DE1CD5A1B90018A505 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925837DD1CD5A1B90018A505 /* Document.swift */; };
 		925837E01CD5A1EA0018A505 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925837DF1CD5A1EA0018A505 /* Audio.swift */; };
 		925837E41CD5BC770018A505 /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925837E31CD5BC770018A505 /* AddDocumentViewController.swift */; };
+		925837E61CD5C5270018A505 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925837E51CD5C5270018A505 /* PlayerViewController.swift */; };
+		925837E81CD5C5520018A505 /* TransformDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925837E71CD5C5520018A505 /* TransformDocumentViewController.swift */; };
 		92E5E8061CD33F13004AC0EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8051CD33F13004AC0EF /* AppDelegate.swift */; };
 		92E5E8081CD33F13004AC0EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8071CD33F13004AC0EF /* ViewController.swift */; };
 		92E5E80B1CD33F13004AC0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E5E8091CD33F13004AC0EF /* Main.storyboard */; };
@@ -42,7 +44,9 @@
 /* Begin PBXFileReference section */
 		925837DD1CD5A1B90018A505 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		925837DF1CD5A1EA0018A505 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
-		925837E31CD5BC770018A505 /* AddDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
+		925837E31CD5BC770018A505 /* AddDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddDocumentViewController.swift; path = ../AddDocumentViewController.swift; sourceTree = "<group>"; };
+		925837E51CD5C5270018A505 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		925837E71CD5C5520018A505 /* TransformDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformDocumentViewController.swift; sourceTree = "<group>"; };
 		92E5E8021CD33F13004AC0EF /* Ditango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ditango.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E5E8051CD33F13004AC0EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E5E8071CD33F13004AC0EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +93,6 @@
 		92E5E7F91CD33F13004AC0EF = {
 			isa = PBXGroup;
 			children = (
-				925837E31CD5BC770018A505 /* AddDocumentViewController.swift */,
 				92E5E8041CD33F13004AC0EF /* Ditango */,
 				92E5E8191CD33F13004AC0EF /* DitangoTests */,
 				92E5E8241CD33F13004AC0EF /* DitangoUITests */,
@@ -110,9 +113,12 @@
 		92E5E8041CD33F13004AC0EF /* Ditango */ = {
 			isa = PBXGroup;
 			children = (
+				925837E31CD5BC770018A505 /* AddDocumentViewController.swift */,
 				92E5E8051CD33F13004AC0EF /* AppDelegate.swift */,
 				92E5E8071CD33F13004AC0EF /* ViewController.swift */,
 				92E5E8091CD33F13004AC0EF /* Main.storyboard */,
+				925837E71CD5C5520018A505 /* TransformDocumentViewController.swift */,
+				925837E51CD5C5270018A505 /* PlayerViewController.swift */,
 				92E5E8351CD34159004AC0EF /* DocumentsTableViewCell.swift */,
 				92E5E80C1CD33F13004AC0EF /* Assets.xcassets */,
 				92E5E80E1CD33F13004AC0EF /* LaunchScreen.storyboard */,
@@ -278,7 +284,9 @@
 				925837E41CD5BC770018A505 /* AddDocumentViewController.swift in Sources */,
 				92E5E8341CD34085004AC0EF /* DocumentsTableViewController.swift in Sources */,
 				925837DE1CD5A1B90018A505 /* Document.swift in Sources */,
+				925837E81CD5C5520018A505 /* TransformDocumentViewController.swift in Sources */,
 				92E5E8081CD33F13004AC0EF /* ViewController.swift in Sources */,
+				925837E61CD5C5270018A505 /* PlayerViewController.swift in Sources */,
 				92E5E8381CD3470F004AC0EF /* DitangoAPI.swift in Sources */,
 				92E5E8061CD33F13004AC0EF /* AppDelegate.swift in Sources */,
 				925837E01CD5A1EA0018A505 /* Audio.swift in Sources */,

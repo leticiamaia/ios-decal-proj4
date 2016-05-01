@@ -136,10 +136,29 @@
             </objects>
             <point key="canvasLocation" x="2614" y="315"/>
         </scene>
+        <!--Player View Controller-->
+        <scene sceneID="7jY-kP-X2N">
+            <objects>
+                <viewController id="4HR-k3-7y4" customClass="PlayerViewController" customModule="Ditango" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qlv-UY-MEZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5xm-tM-sSE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hTU-7u-3aV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qSk-xU-Igc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWK-YB-ZuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2668" y="1206"/>
+        </scene>
         <!--Transform to Audio-->
         <scene sceneID="Vkx-zk-Hus">
             <objects>
-                <viewController id="mYm-Mv-8lW" sceneMemberID="viewController">
+                <viewController id="mYm-Mv-8lW" customClass="TransformDocumentViewController" customModule="Ditango" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fpr-3y-MYq"/>
                         <viewControllerLayoutGuide type="bottom" id="zZV-D7-OHt"/>
@@ -147,6 +166,28 @@
                     <view key="view" contentMode="scaleToFill" id="hlw-kV-tVV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAq-wi-Yl8">
+                                <rect key="frame" x="136" y="121" width="150" height="66"/>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gc7-Zg-eT1">
+                                <rect key="frame" x="153" y="231" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Audio Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3U4-BL-5SF">
+                                <rect key="frame" x="20" y="235" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crp-nF-9HN">
+                                <rect key="frame" x="29" y="143" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Transform to Audio" id="FlN-5z-P2y">
@@ -211,6 +252,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KqG-qw-hWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3364" y="-474"/>
+        </scene>
+        <!--PlayerNaviagtionController-->
+        <scene sceneID="Jmq-6f-44Q">
+            <objects>
+                <navigationController title="PlayerNaviagtionController" automaticallyAdjustsScrollViewInsets="NO" id="tFM-C1-QLM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uVi-Su-bsU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4HR-k3-7y4" kind="relationship" relationship="rootViewController" id="B17-02-Xf1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fVk-mE-n1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904" y="1206"/>
         </scene>
     </scenes>
 </document>
