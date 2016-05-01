@@ -10,6 +10,7 @@ import UIKit
 
 class DocumentsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var documentNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

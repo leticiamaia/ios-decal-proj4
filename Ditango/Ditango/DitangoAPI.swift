@@ -10,11 +10,11 @@ import Foundation
 
 class DitangoAPI {
     let ditangoURL = "http://web.ditango.com.br/service"
-    let searchURL = "/document/search"
     let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7ImlkIjozODEsIm5hbWUiOiJUZXN0ZSBEaXRhbkdvIiwiZW1haWwiOiJ0ZXN0QGRpdGFuZ28uY29tLmJyIiwibG9jYWxlIjoiZW5fVVMiLCJyb2xlcyI6W119LCJrZXkiOiJEaXRhbmdvX0FwcF9LZXkifQ.lDbhoOodT02r0_v1xXNL9hJQMymIkIEVJlMJJHW4_YU"
     
-    func getDocuments(){
+    func getDocuments(completion: (([Document]) -> Void)!) {
         //Test 5.2 first
+        let searchURL = "/document/search"
         let request = NSMutableURLRequest(URL: NSURL(string: ditangoURL+searchURL)!)
         request.HTTPMethod = "POST"
         request.setValue(token, forHTTPHeaderField: "authorization")
@@ -30,6 +30,37 @@ class DitangoAPI {
             print("---> ERROR")
         }
         request.HTTPBody = jsonData
+        var documentsArray = [Document]()
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            guard error == nil && data != nil else {                                                          // check for fundamental networking error
+                print("error=\(error)")
+                return
+            }
+            
+            do {
+                let documentsInfoArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! [NSDictionary]
+                for dict: NSDictionary in documentsInfoArray {
+                    let id = (dict.valueForKey("id") as! NSNumber).longLongValue
+                    let filename = dict.valueForKey("fileName") as! String
+                    let document = Document(id: id, filename: filename)
+                    documentsArray.append(document)
+                }
+               completion(documentsArray)
+                
+            } catch {}
+            
+           // let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+          //  print(responseString)
+        }
+        task.resume()
+    }
+    
+    //Test with 734
+    func getAudioUrl(audioId: String) {
+        let searchURL = "/audio/url/" + audioId;
+        let request = NSMutableURLRequest(URL: NSURL(string: ditangoURL+searchURL)!)
+        request.HTTPMethod = "GET"
+        request.setValue(token, forHTTPHeaderField: "authorization")
         
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
@@ -37,9 +68,11 @@ class DitangoAPI {
                 return
             }
             
+            print(response)
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print(responseString)
         }
         task.resume()
     }
+
 }

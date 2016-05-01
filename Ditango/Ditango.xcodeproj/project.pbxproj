@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		925837DE1CD5A1B90018A505 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925837DD1CD5A1B90018A505 /* Document.swift */; };
+		925837E01CD5A1EA0018A505 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925837DF1CD5A1EA0018A505 /* Audio.swift */; };
 		92E5E8061CD33F13004AC0EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8051CD33F13004AC0EF /* AppDelegate.swift */; };
 		92E5E8081CD33F13004AC0EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8071CD33F13004AC0EF /* ViewController.swift */; };
 		92E5E80B1CD33F13004AC0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E5E8091CD33F13004AC0EF /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		925837DD1CD5A1B90018A505 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		925837DF1CD5A1EA0018A505 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		92E5E8021CD33F13004AC0EF /* Ditango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ditango.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E5E8051CD33F13004AC0EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E5E8071CD33F13004AC0EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				92E5E80E1CD33F13004AC0EF /* LaunchScreen.storyboard */,
 				92E5E8111CD33F13004AC0EF /* Info.plist */,
 				92E5E8331CD34085004AC0EF /* DocumentsTableViewController.swift */,
+				925837DD1CD5A1B90018A505 /* Document.swift */,
+				925837DF1CD5A1EA0018A505 /* Audio.swift */,
 				92E5E8371CD3470F004AC0EF /* DitangoAPI.swift */,
 			);
 			path = Ditango;
@@ -267,9 +273,11 @@
 			files = (
 				92E5E8361CD34159004AC0EF /* DocumentsTableViewCell.swift in Sources */,
 				92E5E8341CD34085004AC0EF /* DocumentsTableViewController.swift in Sources */,
+				925837DE1CD5A1B90018A505 /* Document.swift in Sources */,
 				92E5E8081CD33F13004AC0EF /* ViewController.swift in Sources */,
 				92E5E8381CD3470F004AC0EF /* DitangoAPI.swift in Sources */,
 				92E5E8061CD33F13004AC0EF /* AppDelegate.swift in Sources */,
+				925837E01CD5A1EA0018A505 /* Audio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +502,7 @@
 				92E5E82C1CD33F13004AC0EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92E5E82D1CD33F13004AC0EF /* Build configuration list for PBXNativeTarget "DitangoTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +511,7 @@
 				92E5E82F1CD33F13004AC0EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92E5E8301CD33F13004AC0EF /* Build configuration list for PBXNativeTarget "DitangoUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +520,7 @@
 				92E5E8321CD33F13004AC0EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
