@@ -11,17 +11,34 @@ import AVFoundation
 
 class PlayerViewController: UIViewController {
 
+    @IBOutlet weak var playPauseButton: UIButton!
+    
+    
     var audio : Audio?
     
     let api = DitangoAPI()
     
     
     var player: AVPlayer!
+    
     var item: AVPlayerItem?
     
-    @IBOutlet weak var testLabel: UILabel!
+    @IBAction func playPauseAction(sender: AnyObject) {
+        if(playPauseButton.selected == false) {
+            playPauseButton.selected = true
+            player.play()
+        } else {
+            playPauseButton.selected = false
+            player.pause()
+        }
+        
+    }
     
     override func viewDidLoad() {
+        let playImage = UIImage(named: "play")?.imageWithRenderingMode(.AlwaysTemplate)
+        let pauseImage = UIImage(named: "pause")?.imageWithRenderingMode(.AlwaysTemplate)
+        playPauseButton.setImage(playImage, forState: UIControlState.Normal)
+        playPauseButton.setImage(pauseImage, forState: UIControlState.Selected)
         super.viewDidLoad()
         player = AVPlayer()
     }
@@ -40,7 +57,8 @@ class PlayerViewController: UIViewController {
     func setAudioUrl(url: String!) {
         item = AVPlayerItem(URL: NSURL(string: url)!)
         player.replaceCurrentItemWithPlayerItem(item)
-        player.play()
+        playPauseButton.selected = false
+        //player.play()
     }
 
     /*
