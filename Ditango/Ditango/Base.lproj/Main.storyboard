@@ -147,13 +147,18 @@
                     <view key="view" contentMode="scaleToFill" id="hTU-7u-3aV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play.png" translatesAutoresizingMaskIntoConstraints="NO" id="XwR-CN-cll">
+                                <rect key="frame" x="244" y="282" width="44" height="35"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="qSk-xU-Igc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWK-YB-ZuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2668" y="1206"/>
+            <point key="canvasLocation" x="2584" y="1206"/>
         </scene>
         <!--Transform to Audio-->
         <scene sceneID="Vkx-zk-Hus">
@@ -269,7 +274,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVk-mE-n1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904" y="1206"/>
+            <point key="canvasLocation" x="1840" y="1206"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.png" width="50" height="50"/>
+    </resources>
 </document>
