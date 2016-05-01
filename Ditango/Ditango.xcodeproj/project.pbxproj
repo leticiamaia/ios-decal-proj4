@@ -14,6 +14,9 @@
 		92E5E8101CD33F13004AC0EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E5E80E1CD33F13004AC0EF /* LaunchScreen.storyboard */; };
 		92E5E81B1CD33F13004AC0EF /* DitangoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E81A1CD33F13004AC0EF /* DitangoTests.swift */; };
 		92E5E8261CD33F13004AC0EF /* DitangoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8251CD33F13004AC0EF /* DitangoUITests.swift */; };
+		92E5E8341CD34085004AC0EF /* DocumentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8331CD34085004AC0EF /* DocumentsTableViewController.swift */; };
+		92E5E8361CD34159004AC0EF /* DocumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8351CD34159004AC0EF /* DocumentsTableViewCell.swift */; };
+		92E5E8381CD3470F004AC0EF /* DitangoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8371CD3470F004AC0EF /* DitangoAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		92E5E8211CD33F13004AC0EF /* DitangoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DitangoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E5E8251CD33F13004AC0EF /* DitangoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DitangoUITests.swift; sourceTree = "<group>"; };
 		92E5E8271CD33F13004AC0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E5E8331CD34085004AC0EF /* DocumentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsTableViewController.swift; sourceTree = "<group>"; };
+		92E5E8351CD34159004AC0EF /* DocumentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsTableViewCell.swift; sourceTree = "<group>"; };
+		92E5E8371CD3470F004AC0EF /* DitangoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DitangoAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +106,12 @@
 				92E5E8051CD33F13004AC0EF /* AppDelegate.swift */,
 				92E5E8071CD33F13004AC0EF /* ViewController.swift */,
 				92E5E8091CD33F13004AC0EF /* Main.storyboard */,
+				92E5E8351CD34159004AC0EF /* DocumentsTableViewCell.swift */,
 				92E5E80C1CD33F13004AC0EF /* Assets.xcassets */,
 				92E5E80E1CD33F13004AC0EF /* LaunchScreen.storyboard */,
 				92E5E8111CD33F13004AC0EF /* Info.plist */,
+				92E5E8331CD34085004AC0EF /* DocumentsTableViewController.swift */,
+				92E5E8371CD3470F004AC0EF /* DitangoAPI.swift */,
 			);
 			path = Ditango;
 			sourceTree = "<group>";
@@ -256,7 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E5E8361CD34159004AC0EF /* DocumentsTableViewCell.swift in Sources */,
+				92E5E8341CD34085004AC0EF /* DocumentsTableViewController.swift in Sources */,
 				92E5E8081CD33F13004AC0EF /* ViewController.swift in Sources */,
+				92E5E8381CD3470F004AC0EF /* DitangoAPI.swift in Sources */,
 				92E5E8061CD33F13004AC0EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
