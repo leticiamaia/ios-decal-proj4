@@ -22,6 +22,7 @@ class DocumentsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
        // api.getAudioUrl("831")
         api.getDocuments(setDocuments)
+        //api.uploadText("my test file. UC, Berkeley is the best UC", documentName: "Berkeley", locale: "en_US")
         print(documents)
     }
 
@@ -51,6 +52,10 @@ class DocumentsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("audiosToPlayerSegue", sender: documents[indexPath.row])
+    }
+    
     func setDocuments(newDocuments: [Document]) {
         dispatch_async(dispatch_get_main_queue()) {
             print(newDocuments)
@@ -58,6 +63,8 @@ class DocumentsTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -93,14 +100,22 @@ class DocumentsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "audiosToPlayerSegue") {
+            let document = sender as! Document
+            print("aquiii ->> " + document.filename)
+            let destinationVC = segue.destinationViewController as! PlayerViewController
+            destinationVC.audio = document.audio
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        
     }
-    */
+    
 
 }

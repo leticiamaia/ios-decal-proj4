@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fTC-vI-x0o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fTC-vI-x0o">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -64,6 +64,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="4HR-k3-7y4" kind="show" identifier="audiosToPlayerSegue" id="9AT-79-sSD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frZ-Ml-uND" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,7 +124,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mfY-pF-dci"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="jtM-9o-KwP">
                             <connections>
-                                <segue destination="Wc6-G2-nnA" kind="presentation" id="Rh6-aa-Ohg"/>
+                                <action selector="saveDocumentAction:" destination="XXK-DD-Amo" id="dk0-hU-Gyh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -151,10 +154,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play.png" translatesAutoresizingMaskIntoConstraints="NO" id="XwR-CN-cll">
                                 <rect key="frame" x="244" y="282" width="44" height="35"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-kK-jDV">
+                                <rect key="frame" x="42" y="99" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="qSk-xU-Igc"/>
+                    <connections>
+                        <outlet property="testLabel" destination="HdO-kK-jDV" id="Zoo-Ax-toI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWK-YB-ZuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,4 +292,7 @@
     <resources>
         <image name="play.png" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="B17-02-Xf1"/>
+    </inferredMetricsTieBreakers>
 </document>

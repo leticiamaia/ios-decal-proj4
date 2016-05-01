@@ -16,6 +16,8 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
     
     @IBOutlet weak var fileNameTextField: UITextField!
     
+    let api = DitangoAPI()
+    
     let pickerData = ["English(US)", "Portuguese(Brazil)"]
     
     override func viewDidLoad() {
@@ -45,6 +47,13 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
+    
+    @IBAction func saveDocumentAction(sender: AnyObject) {
+        let documentName = fileNameTextField.text
+        let text = inputTextView.text
+        api.uploadText(text, documentName: documentName!, locale: "en_US")
+    }
+    
 
     /*
     // MARK: - Navigation
