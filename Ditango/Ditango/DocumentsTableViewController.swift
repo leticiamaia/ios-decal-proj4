@@ -53,7 +53,9 @@ class DocumentsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("audiosToPlayerSegue", sender: documents[indexPath.row])
+        dispatch_async(dispatch_get_main_queue(),{
+            self.performSegueWithIdentifier("audiosToPlayerSegue", sender: self.documents[indexPath.row])})
+        
     }
     
     func setDocuments(newDocuments: [Document]) {
@@ -109,6 +111,12 @@ class DocumentsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "audiosToNewDocument") {
+            let navigationVC = segue.destinationViewController as! UINavigationController
+            let destinationVC = navigationVC.topViewController as! AddDocumentViewController
+            destinationVC.sender = self
+        }
+        
         if(segue.identifier == "audiosToPlayerSegue") {
             let document = sender as! Document
             print("aquiii ->> " + document.filename)

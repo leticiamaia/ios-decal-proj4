@@ -61,7 +61,7 @@ class DitangoAPI {
         task.resume()
     }
     
-    func convertDocument(documentId: Int64, documentName: String) {
+    func convertDocument(documentId: Int64, documentName: String, completion: (() -> Void)!) {
         let searchURL = "/document/convert";
         let request = NSMutableURLRequest(URL: NSURL(string: ditangoURL+searchURL)!)
         request.HTTPMethod = "POST"
@@ -95,12 +95,13 @@ class DitangoAPI {
             print(response)
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print(responseString)
+            completion()
         }
         task.resume()
 
     }
     
-    func uploadText(fileText : String, documentName : String, locale : String) {
+    func uploadText(fileText : String, documentName : String, locale : String, completion: (() -> Void)!) {
         
         print("entrou")
         
@@ -131,8 +132,7 @@ class DitangoAPI {
                 let documentInfo = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 
                 let documentId = (documentInfo.valueForKey("id") as! NSNumber).longLongValue
-                self.convertDocument(documentId, documentName: documentName)
-                //completion(documentInfo)
+                self.convertDocument(documentId, documentName: documentName, completion:completion)
                 
             } catch {}
 

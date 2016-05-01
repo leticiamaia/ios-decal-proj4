@@ -16,6 +16,8 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
     
     @IBOutlet weak var fileNameTextField: UITextField!
     
+    var sender:DocumentsTableViewController?
+    
     let api = DitangoAPI()
     
     let pickerData = ["English(US)", "Portuguese(Brazil)"]
@@ -33,7 +35,7 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
     }
     
     @IBAction func cancel(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     
@@ -55,9 +57,22 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
     @IBAction func saveDocumentAction(sender: AnyObject) {
         let documentName = fileNameTextField.text
         let text = inputTextView.text
-        api.uploadText(text, documentName: documentName!, locale: "en_US")
+        api.uploadText(text, documentName: documentName!, locale: "en_US", completion:updateAfterCompletion)
+        cancel(sender)
     }
     
+    func updateAfterCompletion() {
+        api.getDocuments(updateAfterAfter)
+    }
+    
+    func updateAfterAfter(newDocuments : [Document]) {
+        sender?.documents = newDocuments
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.sender!.tableView.reloadData()
+        })
+        
+
+    }
 
     /*
     // MARK: - Navigation
