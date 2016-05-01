@@ -21,10 +21,11 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
     let api = DitangoAPI()
     
     let pickerData = ["English(US)", "Portuguese(Brazil)"]
+    let languageDict = ["English(US)":"en_US", "Portuguese(Brazil)":"pt_BR"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
         self.languagePickerView.delegate = self
         self.languagePickerView.dataSource = self
     }
@@ -57,7 +58,9 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
     @IBAction func saveDocumentAction(sender: AnyObject) {
         let documentName = fileNameTextField.text
         let text = inputTextView.text
-        api.uploadText(text, documentName: documentName!, locale: "en_US", completion:updateAfterCompletion)
+        let language = pickerData[languagePickerView.selectedRowInComponent(0)]
+        print(language)
+        api.uploadText(text, documentName: documentName!, locale: languageDict[language]!, completion:updateAfterCompletion)
         cancel(sender)
     }
     

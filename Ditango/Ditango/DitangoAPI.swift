@@ -54,9 +54,6 @@ class DitangoAPI {
                completion(documentsArray)
                 
             } catch {}
-            
-           // let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-          //  print(responseString)
         }
         task.resume()
     }
@@ -102,9 +99,6 @@ class DitangoAPI {
     }
     
     func uploadText(fileText : String, documentName : String, locale : String, completion: (() -> Void)!) {
-        
-        print("entrou")
-        
         let searchURL = "/document/uploadtext";
         let request = NSMutableURLRequest(URL: NSURL(string: ditangoURL+searchURL)!)
         request.HTTPMethod = "POST"
