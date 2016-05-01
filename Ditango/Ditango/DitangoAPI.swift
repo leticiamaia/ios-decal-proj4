@@ -146,20 +146,32 @@ class DitangoAPI {
     
     func getAudioUrl(audioId: String, completion: ((String) -> Void)!) {
         let searchURL = "/audio/url/" + audioId;
-        print("audioId:" + audioId)
         let request = NSMutableURLRequest(URL: NSURL(string: ditangoURL+searchURL)!)
         request.HTTPMethod = "GET"
         request.setValue(token, forHTTPHeaderField: "authorization")
-        print("request:", request)
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
                 print("error=\(error)")
                 return
             }
             
-            print("response:", response)
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
             completion(String(responseString))
+        }
+        task.resume()
+    }
+    
+    func deleteDocument(documentId: String) {
+        let searchURL = "/document/" + documentId
+        let request = NSMutableURLRequest(URL: NSURL(string: ditangoURL+searchURL)!)
+        request.HTTPMethod = "DELETE"
+        request.setValue(token, forHTTPHeaderField: "authorization")
+
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            guard error == nil && data != nil else {                                                          // check for fundamental networking error
+                print("error=\(error)")
+                return
+            }
         }
         task.resume()
     }

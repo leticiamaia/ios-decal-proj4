@@ -24,9 +24,6 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         player = AVPlayer()
-        //player = AVPlayer(URL: NSURL(string: "http://repos.ditango.com.br/381/audio/audio.mp3")!)
-        //player.play()
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -41,13 +38,9 @@ class PlayerViewController: UIViewController {
     }
     
     func setAudioUrl(url: String!) {
-        //print(url)
         item = AVPlayerItem(URL: NSURL(string: url)!)
         player.replaceCurrentItemWithPlayerItem(item)
-        //print(player.currentItem)
-        print("chegouaqui")
         player.play()
-        print("saiuuu")
     }
 
     /*
