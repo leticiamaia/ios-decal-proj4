@@ -77,3 +77,7 @@ documents/audios list, along with a new audio.
 - SideMenuViewController
 - UploadDocumentViewController
 - ConvertDocumentViewController
+
+## Credits
+- DitanGo for document conversion and storage.
+
