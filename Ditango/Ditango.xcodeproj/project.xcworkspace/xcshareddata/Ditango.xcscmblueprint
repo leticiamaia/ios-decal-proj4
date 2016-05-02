@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B1A1CD42E9D8041A0CD0B59BD74D0DDBC77E7C13",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "11E52178DD2EC05CDE4C0EE5549B387A75A90823" : 0,
+    "B1A1CD42E9D8041A0CD0B59BD74D0DDBC77E7C13" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "729213AF-9DF5-4C30-A13E-AB02BA0005D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "11E52178DD2EC05CDE4C0EE5549B387A75A90823" : "ios-decal-hw4\/",
+    "B1A1CD42E9D8041A0CD0B59BD74D0DDBC77E7C13" : "ios-decal-proj4\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Ditango",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Ditango\/Ditango.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lucasmf\/ios-decal-hw4.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "11E52178DD2EC05CDE4C0EE5549B387A75A90823"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/leticiamaia\/ios-decal-proj4.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B1A1CD42E9D8041A0CD0B59BD74D0DDBC77E7C13"
+    }
+  ]
+}
