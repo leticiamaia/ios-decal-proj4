@@ -70,52 +70,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of Audio" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPI-EG-Gg6">
-                                <rect key="frame" x="20" y="212" width="557" height="30"/>
+                                <rect key="frame" x="20" y="272" width="557" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="fGQ-zP-sUN"/>
+                                    <constraint firstAttribute="height" constant="30" id="ZvT-QH-lhx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnr-1U-ceF">
-                                <rect key="frame" x="158" y="154" width="284" height="50"/>
+                                <rect key="frame" x="158" y="202" width="284" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="284" id="gwc-7t-Uqv"/>
+                                    <constraint firstAttribute="width" constant="284" id="27Y-a6-e5W"/>
+                                    <constraint firstAttribute="height" constant="50" id="IQ5-hJ-fS5"/>
                                 </constraints>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlB-o5-4pX">
-                                <rect key="frame" x="20" y="250" width="557" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyO-Fd-ftk">
-                                <rect key="frame" x="262" y="134" width="76" height="21"/>
+                                <rect key="frame" x="260" y="182" width="76" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="76" id="aIO-9V-x08"/>
+                                    <constraint firstAttribute="height" constant="21" id="jkn-BZ-GqE"/>
+                                    <constraint firstAttribute="width" constant="76" id="wew-cS-92a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u8f-U4-uxG">
+                                <rect key="frame" x="20" y="317" width="557" height="128"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ditangoIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="VqK-4g-9s3">
+                                <rect key="frame" x="279" y="108" width="42" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="Y0b-PG-K82"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="OPI-EG-Gg6" secondAttribute="trailing" constant="3" id="7eu-t1-oDa"/>
-                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="leading" secondItem="DQb-SG-PRY" secondAttribute="leadingMargin" id="BCg-Tr-zss"/>
-                            <constraint firstItem="Mm8-jd-MIh" firstAttribute="top" secondItem="DlB-o5-4pX" secondAttribute="bottom" constant="276" id="NIo-bo-9gU"/>
-                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="top" secondItem="Wnr-1U-ceF" secondAttribute="bottom" constant="8" symbolic="YES" id="TDF-FS-tn5"/>
-                            <constraint firstItem="DlB-o5-4pX" firstAttribute="trailing" secondItem="OPI-EG-Gg6" secondAttribute="trailing" id="VpD-0a-PWS"/>
-                            <constraint firstItem="fyO-Fd-ftk" firstAttribute="top" secondItem="ZM3-ce-rxj" secondAttribute="bottom" constant="70" id="bGl-0s-Bem"/>
-                            <constraint firstItem="DlB-o5-4pX" firstAttribute="top" secondItem="OPI-EG-Gg6" secondAttribute="bottom" constant="8" symbolic="YES" id="hEv-F9-N9e"/>
-                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="top" secondItem="DQb-SG-PRY" secondAttribute="top" constant="212" id="mxp-7h-ENQ"/>
-                            <constraint firstItem="fyO-Fd-ftk" firstAttribute="centerX" secondItem="Wnr-1U-ceF" secondAttribute="centerX" id="qD2-e0-Tgt"/>
-                            <constraint firstItem="Wnr-1U-ceF" firstAttribute="top" secondItem="ZM3-ce-rxj" secondAttribute="bottom" constant="90" id="umf-gB-H5G"/>
-                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="top" secondItem="fyO-Fd-ftk" secondAttribute="bottom" constant="57" id="xdZ-qu-rWS"/>
-                            <constraint firstItem="DlB-o5-4pX" firstAttribute="leading" secondItem="OPI-EG-Gg6" secondAttribute="leading" id="xfg-ET-i9W"/>
-                            <constraint firstItem="Wnr-1U-ceF" firstAttribute="centerX" secondItem="DQb-SG-PRY" secondAttribute="centerX" id="zxb-Mm-znK"/>
+                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="top" secondItem="Wnr-1U-ceF" secondAttribute="bottom" constant="20" id="IE6-Mx-wqQ"/>
+                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="top" secondItem="DQb-SG-PRY" secondAttribute="top" constant="272" id="KkI-m3-RMt"/>
+                            <constraint firstItem="fyO-Fd-ftk" firstAttribute="centerX" secondItem="OPI-EG-Gg6" secondAttribute="centerX" id="Oc9-eM-p4S"/>
+                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="trailing" secondItem="u8f-U4-uxG" secondAttribute="trailing" id="PDN-kd-ZCR"/>
+                            <constraint firstItem="u8f-U4-uxG" firstAttribute="top" secondItem="OPI-EG-Gg6" secondAttribute="bottom" constant="15" id="YlO-s6-RnZ"/>
+                            <constraint firstItem="VqK-4g-9s3" firstAttribute="centerX" secondItem="Wnr-1U-ceF" secondAttribute="centerX" id="aFZ-8A-hoc"/>
+                            <constraint firstItem="Wnr-1U-ceF" firstAttribute="centerX" secondItem="DQb-SG-PRY" secondAttribute="centerX" id="aZD-fN-567"/>
+                            <constraint firstItem="fyO-Fd-ftk" firstAttribute="top" secondItem="VqK-4g-9s3" secondAttribute="bottom" constant="33" id="csh-Dj-0tg"/>
+                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="leading" secondItem="DQb-SG-PRY" secondAttribute="leadingMargin" id="dEk-E8-nGV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OPI-EG-Gg6" secondAttribute="trailing" constant="3" id="efJ-Jw-0cK"/>
+                            <constraint firstItem="Mm8-jd-MIh" firstAttribute="top" secondItem="u8f-U4-uxG" secondAttribute="bottom" constant="111" id="fNd-kP-HQ2"/>
+                            <constraint firstItem="VqK-4g-9s3" firstAttribute="top" secondItem="ZM3-ce-rxj" secondAttribute="bottom" constant="44" id="iiC-km-vJW"/>
+                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="leading" secondItem="u8f-U4-uxG" secondAttribute="leading" id="min-zj-pqP"/>
+                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="top" secondItem="fyO-Fd-ftk" secondAttribute="bottom" constant="69" id="vAU-Ia-dvA"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -134,7 +143,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="fileNameTextField" destination="OPI-EG-Gg6" id="LPC-dM-1E7"/>
-                        <outlet property="inputTextView" destination="DlB-o5-4pX" id="VNQ-8X-r9h"/>
+                        <outlet property="inputTextView" destination="u8f-U4-uxG" id="Z1B-4U-360"/>
                         <outlet property="languagePickerView" destination="Wnr-1U-ceF" id="rWe-bw-qAk"/>
                     </connections>
                 </viewController>
@@ -185,7 +194,7 @@
                                     <constraint firstAttribute="width" constant="300" id="Be3-21-iZX"/>
                                 </constraints>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3y-M0-DKt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3y-M0-DKt">
                                 <rect key="frame" x="279" y="340" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -275,6 +284,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ditangoIcon.png" width="32" height="32"/>
         <image name="next.png" width="50" height="50"/>
         <image name="pause.png" width="50" height="50"/>
         <image name="previous.png" width="50" height="50"/>

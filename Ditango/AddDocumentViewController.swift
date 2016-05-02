@@ -12,7 +12,7 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
 
     @IBOutlet weak var languagePickerView: UIPickerView!
     
-    @IBOutlet weak var inputTextView: UITextField!
+    @IBOutlet weak var inputTextView: UITextView!
     
     @IBOutlet weak var fileNameTextField: UITextField!
     
