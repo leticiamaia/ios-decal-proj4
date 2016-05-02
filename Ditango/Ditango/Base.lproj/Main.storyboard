@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fTC-vI-x0o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fTC-vI-x0o">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -185,14 +185,22 @@
                                     <constraint firstAttribute="width" constant="300" id="Be3-21-iZX"/>
                                 </constraints>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3y-M0-DKt">
+                                <rect key="frame" x="279" y="340" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LK4-CB-AqA" firstAttribute="top" secondItem="d3y-M0-DKt" secondAttribute="bottom" constant="14" id="3lp-rX-4I0"/>
                             <constraint firstItem="3fV-nm-iNC" firstAttribute="centerY" secondItem="hTU-7u-3aV" secondAttribute="centerY" id="BnH-l8-4HU"/>
                             <constraint firstItem="3fV-nm-iNC" firstAttribute="leading" secondItem="mnz-XA-u8u" secondAttribute="trailing" constant="6" id="FW4-OB-eDY"/>
                             <constraint firstItem="3fV-nm-iNC" firstAttribute="centerX" secondItem="hTU-7u-3aV" secondAttribute="centerX" id="J3u-mn-LUN"/>
                             <constraint firstItem="LK4-CB-AqA" firstAttribute="centerX" secondItem="hTU-7u-3aV" secondAttribute="centerX" id="LuC-Lk-Ok2"/>
                             <constraint firstItem="mnz-XA-u8u" firstAttribute="centerY" secondItem="3fV-nm-iNC" secondAttribute="centerY" id="bui-Ea-R3U"/>
+                            <constraint firstItem="d3y-M0-DKt" firstAttribute="centerX" secondItem="LK4-CB-AqA" secondAttribute="centerX" id="qJt-mF-IlR"/>
                             <constraint firstItem="LK4-CB-AqA" firstAttribute="top" secondItem="3fV-nm-iNC" secondAttribute="bottom" constant="25" id="uX0-QZ-IH6"/>
                             <constraint firstItem="CcT-bJ-zbx" firstAttribute="leading" secondItem="3fV-nm-iNC" secondAttribute="trailing" constant="8" id="uc4-vI-up6"/>
                             <constraint firstItem="CcT-bJ-zbx" firstAttribute="centerY" secondItem="3fV-nm-iNC" secondAttribute="centerY" id="yog-0i-csX"/>
@@ -200,6 +208,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qSk-xU-Igc"/>
                     <connections>
+                        <outlet property="audioNameLabel" destination="d3y-M0-DKt" id="UMy-tW-bzI"/>
                         <outlet property="nextButton" destination="CcT-bJ-zbx" id="5Mn-xt-3qP"/>
                         <outlet property="playPauseButton" destination="3fV-nm-iNC" id="eJY-34-esM"/>
                         <outlet property="previousButton" destination="mnz-XA-u8u" id="8Uq-ON-pxE"/>

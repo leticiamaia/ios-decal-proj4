@@ -17,6 +17,7 @@ class PlayerViewController: UIViewController {
     
     @IBOutlet weak var previousButton: UIButton!
     
+    @IBOutlet weak var audioNameLabel: UILabel!
     var documents :[Document]?
     var currentTrackNumber: Int = 0
     
@@ -65,13 +66,13 @@ class PlayerViewController: UIViewController {
         previousButton.setImage(previousImage, forState: UIControlState.Normal)
         super.viewDidLoad()
         player = AVPlayer()
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
     
     func update() {
         if let i = item {
-            var time = CMTimeGetSeconds(i.currentTime())
-            var siz = CMTimeGetSeconds(i.asset.duration)
+            let time = CMTimeGetSeconds(i.currentTime())
+            let siz = CMTimeGetSeconds(i.asset.duration)
             progressBar.setProgress(Float(time/siz), animated: true)
         }
     }
@@ -80,6 +81,7 @@ class PlayerViewController: UIViewController {
         super.viewDidAppear(animated)
         if let documents = documents {
             let audio = documents[currentTrackNumber].audio
+            audioNameLabel.text = audio?.filename
             api.getAudioUrl(String(audio!.id), completion: setAudioUrl)
         }
     }
@@ -100,6 +102,7 @@ class PlayerViewController: UIViewController {
         if let documents = documents {
                   currentTrackNumber = (currentTrackNumber + 1) % documents.count
             let audio = documents[currentTrackNumber].audio
+            audioNameLabel.text = audio?.filename
             playPauseButton.selected = false
             api.getAudioUrl(String(audio!.id), completion: setAudioUrl)
         }
@@ -109,10 +112,14 @@ class PlayerViewController: UIViewController {
     
     @IBAction func previousTrackAction(sender: AnyObject) {
         if let documents = documents {
+            playPauseButton.selected = false
             if currentTrackNumber > 0 {
                 currentTrackNumber -= 1
                 let audio = documents[currentTrackNumber].audio
+                audioNameLabel.text = audio?.filename
                 api.getAudioUrl(String(audio!.id), completion: setAudioUrl)
+            } else {
+                player.seekToTime(CMTimeMake(0,1))
             }
         }
     }
