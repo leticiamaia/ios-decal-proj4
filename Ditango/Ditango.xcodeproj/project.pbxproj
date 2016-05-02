@@ -27,6 +27,8 @@
 		92E5E8341CD34085004AC0EF /* DocumentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8331CD34085004AC0EF /* DocumentsTableViewController.swift */; };
 		92E5E8361CD34159004AC0EF /* DocumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8351CD34159004AC0EF /* DocumentsTableViewCell.swift */; };
 		92E5E8381CD3470F004AC0EF /* DitangoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8371CD3470F004AC0EF /* DitangoAPI.swift */; };
+		A005BE571CD6D72F006F9F82 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = A005BE551CD6D72F006F9F82 /* next.png */; };
+		A005BE581CD6D72F006F9F82 /* previous.png in Resources */ = {isa = PBXBuildFile; fileRef = A005BE561CD6D72F006F9F82 /* previous.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		92E5E8331CD34085004AC0EF /* DocumentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsTableViewController.swift; sourceTree = "<group>"; };
 		92E5E8351CD34159004AC0EF /* DocumentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsTableViewCell.swift; sourceTree = "<group>"; };
 		92E5E8371CD3470F004AC0EF /* DitangoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DitangoAPI.swift; sourceTree = "<group>"; };
+		A005BE551CD6D72F006F9F82 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		A005BE561CD6D72F006F9F82 /* previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				925837F71CD6B1C00018A505 /* ditangoIcon.png */,
 				925837F31CD6A9060018A505 /* logoDitango2.png */,
 				925837F11CD69E9E0018A505 /* logoDitango.png */,
+				A005BE551CD6D72F006F9F82 /* next.png */,
+				A005BE561CD6D72F006F9F82 /* previous.png */,
 				925837ED1CD5C6FA0018A505 /* play.png */,
 				925837EB1CD5C6DE0018A505 /* pause.png */,
 				925837E31CD5BC770018A505 /* AddDocumentViewController.swift */,
@@ -274,6 +280,8 @@
 				92E5E80D1CD33F13004AC0EF /* Assets.xcassets in Resources */,
 				925837EC1CD5C6DE0018A505 /* pause.png in Resources */,
 				925837F21CD69E9E0018A505 /* logoDitango.png in Resources */,
+				A005BE581CD6D72F006F9F82 /* previous.png in Resources */,
+				A005BE571CD6D72F006F9F82 /* next.png in Resources */,
 				92E5E80B1CD33F13004AC0EF /* Main.storyboard in Resources */,
 				925837EE1CD5C6FA0018A505 /* play.png in Resources */,
 				925837F41CD6A9060018A505 /* logoDitango2.png in Resources */,

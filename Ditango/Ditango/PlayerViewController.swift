@@ -13,8 +13,12 @@ class PlayerViewController: UIViewController {
 
     @IBOutlet weak var playPauseButton: UIButton!
     
+    @IBOutlet weak var nextButton: UIButton!
     
-    var audio : Audio?
+    @IBOutlet weak var previousButton: UIButton!
+    
+    var documents :[Document]?
+    var currentTrackNumber: Int = 0
     
     let api = DitangoAPI()
     
@@ -50,15 +54,22 @@ class PlayerViewController: UIViewController {
         
         let playImage = UIImage(named: "play")?.imageWithRenderingMode(.AlwaysTemplate)
         let pauseImage = UIImage(named: "pause")?.imageWithRenderingMode(.AlwaysTemplate)
+        let nextImage = UIImage(named: "next")?.imageWithRenderingMode(.AlwaysTemplate)
+        let previousImage = UIImage(named: "previous")?.imageWithRenderingMode(.AlwaysTemplate)
         playPauseButton.setImage(playImage, forState: UIControlState.Normal)
         playPauseButton.setImage(pauseImage, forState: UIControlState.Selected)
+        nextButton.setImage(nextImage, forState: UIControlState.Normal)
+        previousButton.setImage(previousImage, forState: UIControlState.Normal)
         super.viewDidLoad()
         player = AVPlayer()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        api.getAudioUrl(String(audio!.id), completion: setAudioUrl)
+        if let documents = documents {
+            let audio = documents[currentTrackNumber].audio
+            api.getAudioUrl(String(audio!.id), completion: setAudioUrl)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +83,26 @@ class PlayerViewController: UIViewController {
         player.replaceCurrentItemWithPlayerItem(item)
         playPauseButton.selected = false
         //player.play()
+    }
+
+    @IBAction func nextTrackAction(sender: AnyObject) {
+        if let documents = documents {
+                  currentTrackNumber = (currentTrackNumber + 1) % documents.count
+            let audio = documents[currentTrackNumber].audio
+            api.getAudioUrl(String(audio!.id), completion: setAudioUrl)
+        }
+        
+    }
+    
+    
+    @IBAction func previousTrackAction(sender: AnyObject) {
+        if let documents = documents {
+            if currentTrackNumber > 0 {
+                currentTrackNumber -= 1
+                let audio = documents[currentTrackNumber].audio
+                api.getAudioUrl(String(audio!.id), completion: setAudioUrl)
+            }
+        }
     }
 
     /*

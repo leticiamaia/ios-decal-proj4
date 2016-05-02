@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fTC-vI-x0o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fTC-vI-x0o">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,24 +7,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ditango" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="544" y="308"/>
-        </scene>
         <!--ditanGo-->
         <scene sceneID="wb1-gj-npC">
             <objects>
@@ -183,16 +165,36 @@
                                     <action selector="playPauseAction:" destination="4HR-k3-7y4" eventType="touchUpInside" id="d5N-cU-wnT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcT-bJ-zbx">
+                                <rect key="frame" x="358" y="275" width="50" height="50"/>
+                                <state key="normal" image="next.png"/>
+                                <connections>
+                                    <action selector="nextTrackAction:" destination="4HR-k3-7y4" eventType="touchUpInside" id="zTC-ib-imC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnz-XA-u8u">
+                                <rect key="frame" x="194" y="275" width="50" height="50"/>
+                                <state key="normal" image="previous.png"/>
+                                <connections>
+                                    <action selector="previousTrackAction:" destination="4HR-k3-7y4" eventType="touchUpInside" id="Pw8-54-354"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3fV-nm-iNC" firstAttribute="centerY" secondItem="hTU-7u-3aV" secondAttribute="centerY" id="BnH-l8-4HU"/>
+                            <constraint firstItem="3fV-nm-iNC" firstAttribute="leading" secondItem="mnz-XA-u8u" secondAttribute="trailing" constant="6" id="FW4-OB-eDY"/>
                             <constraint firstItem="3fV-nm-iNC" firstAttribute="centerX" secondItem="hTU-7u-3aV" secondAttribute="centerX" id="J3u-mn-LUN"/>
+                            <constraint firstItem="mnz-XA-u8u" firstAttribute="centerY" secondItem="3fV-nm-iNC" secondAttribute="centerY" id="bui-Ea-R3U"/>
+                            <constraint firstItem="CcT-bJ-zbx" firstAttribute="leading" secondItem="3fV-nm-iNC" secondAttribute="trailing" constant="8" id="uc4-vI-up6"/>
+                            <constraint firstItem="CcT-bJ-zbx" firstAttribute="centerY" secondItem="3fV-nm-iNC" secondAttribute="centerY" id="yog-0i-csX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qSk-xU-Igc"/>
                     <connections>
+                        <outlet property="nextButton" destination="CcT-bJ-zbx" id="5Mn-xt-3qP"/>
                         <outlet property="playPauseButton" destination="3fV-nm-iNC" id="eJY-34-esM"/>
+                        <outlet property="previousButton" destination="mnz-XA-u8u" id="8Uq-ON-pxE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWK-YB-ZuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -255,7 +257,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="next.png" width="50" height="50"/>
         <image name="pause.png" width="50" height="50"/>
+        <image name="previous.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9AT-79-sSD"/>

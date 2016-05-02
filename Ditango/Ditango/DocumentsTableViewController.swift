@@ -66,7 +66,7 @@ class DocumentsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         dispatch_async(dispatch_get_main_queue(),{
-            self.performSegueWithIdentifier("audiosToPlayerSegue", sender: self.documents[indexPath.row])})
+            self.performSegueWithIdentifier("audiosToPlayerSegue", sender: indexPath.row)})
         
     }
     
@@ -130,10 +130,10 @@ class DocumentsTableViewController: UITableViewController {
         }
         
         if(segue.identifier == "audiosToPlayerSegue") {
-            let document = sender as! Document
-            print("aquiii ->> " + document.filename)
+            let documentIndex = sender as! Int
             let destinationVC = segue.destinationViewController as! PlayerViewController
-            destinationVC.audio = document.audio
+            destinationVC.documents = documents
+            destinationVC.currentTrackNumber = documentIndex
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
