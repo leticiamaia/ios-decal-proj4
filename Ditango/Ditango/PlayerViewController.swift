@@ -22,6 +22,7 @@ class PlayerViewController: UIViewController {
     
     let api = DitangoAPI()
     
+    @IBOutlet weak var progressBar: UIProgressView!
     
     var player: AVPlayer!
     
@@ -39,6 +40,8 @@ class PlayerViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+        progressBar.setProgress(0, animated: false)
         
         let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
         let contextImage = UIImage(named: "bg2.jpg")
@@ -62,6 +65,15 @@ class PlayerViewController: UIViewController {
         previousButton.setImage(previousImage, forState: UIControlState.Normal)
         super.viewDidLoad()
         player = AVPlayer()
+        var timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+    }
+    
+    func update() {
+        if let i = item {
+            var time = CMTimeGetSeconds(i.currentTime())
+            var siz = CMTimeGetSeconds(i.asset.duration)
+            progressBar.setProgress(Float(time/siz), animated: true)
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -81,14 +93,14 @@ class PlayerViewController: UIViewController {
     func setAudioUrl(url: String!) {
         item = AVPlayerItem(URL: NSURL(string: url)!)
         player.replaceCurrentItemWithPlayerItem(item)
-        playPauseButton.selected = false
-        //player.play()
+                //player.play()
     }
 
     @IBAction func nextTrackAction(sender: AnyObject) {
         if let documents = documents {
                   currentTrackNumber = (currentTrackNumber + 1) % documents.count
             let audio = documents[currentTrackNumber].audio
+            playPauseButton.selected = false
             api.getAudioUrl(String(audio!.id), completion: setAudioUrl)
         }
         
