@@ -25,16 +25,16 @@
             </objects>
             <point key="canvasLocation" x="544" y="308"/>
         </scene>
-        <!--Your Audios-->
+        <!--ditanGo-->
         <scene sceneID="wb1-gj-npC">
             <objects>
                 <tableViewController id="c6B-T5-fie" customClass="DocumentsTableViewController" customModule="Ditango" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qvf-hv-8j1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DocumentCellIdentifier" id="rkE-Bz-NEJ" customClass="DocumentsTableViewCell" customModule="Ditango" customModuleProvider="target">
+                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DocumentCellIdentifier" id="rkE-Bz-NEJ" customClass="DocumentsTableViewCell" customModule="Ditango" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rkE-Bz-NEJ" id="Yaz-aM-xub">
@@ -44,11 +44,12 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Document Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wD-cB-Pm3">
                                             <rect key="frame" x="17" y="8" width="567" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="documentNameLabel" destination="3wD-cB-Pm3" id="xAw-JW-PvU"/>
                                 </connections>
@@ -59,7 +60,7 @@
                             <outlet property="delegate" destination="c6B-T5-fie" id="z9E-0V-eOX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Audios" id="uQ0-sd-pET">
+                    <navigationItem key="navigationItem" title="ditanGo" id="uQ0-sd-pET">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EyD-vl-JxK">
                             <connections>
                                 <segue destination="73y-JF-FzU" kind="presentation" identifier="audiosToNewDocument" id="741-C6-xK5"/>
@@ -74,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="1818" y="315"/>
         </scene>
-        <!--Add Document-->
+        <!--Add/Convert Document-->
         <scene sceneID="XCW-dh-2FK">
             <objects>
                 <viewController id="XXK-DD-Amo" customClass="AddDocumentViewController" customModule="Ditango" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,56 +87,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wnr-1U-ceF">
-                                <rect key="frame" x="20" y="246" width="540" height="38"/>
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of Audio" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPI-EG-Gg6">
+                                <rect key="frame" x="20" y="212" width="557" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="TJr-l2-58g"/>
-                                    <constraint firstAttribute="height" constant="200" id="WNg-cW-rnp"/>
-                                    <constraint firstAttribute="height" constant="38" id="eU8-uv-aaq"/>
+                                    <constraint firstAttribute="height" constant="30" id="fGQ-zP-sUN"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="TJr-l2-58g"/>
-                                        <exclude reference="WNg-cW-rnp"/>
-                                    </mask>
-                                </variation>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnr-1U-ceF">
+                                <rect key="frame" x="158" y="154" width="284" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="gwc-7t-Uqv"/>
+                                </constraints>
                             </pickerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rRB-ZY-YMN">
-                                <rect key="frame" x="20" y="313" width="540" height="186"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Audio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPI-EG-Gg6">
-                                        <rect key="frame" x="0.0" y="0.0" width="540" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Tt-el-bwz">
-                                        <rect key="frame" x="0.0" y="30" width="540" height="156"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlB-o5-4pX">
+                                <rect key="frame" x="20" y="250" width="557" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyO-Fd-ftk">
+                                <rect key="frame" x="262" y="134" width="76" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="aIO-9V-x08"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Wnr-1U-ceF" secondAttribute="trailing" constant="20" id="Dvo-bF-koj"/>
-                            <constraint firstItem="Mm8-jd-MIh" firstAttribute="top" secondItem="rRB-ZY-YMN" secondAttribute="bottom" constant="57" id="JBK-Qe-FI4"/>
-                            <constraint firstItem="Wnr-1U-ceF" firstAttribute="top" secondItem="DQb-SG-PRY" secondAttribute="top" constant="246" id="XaD-Mq-lYF"/>
-                            <constraint firstItem="rRB-ZY-YMN" firstAttribute="top" secondItem="Wnr-1U-ceF" secondAttribute="bottom" constant="29" id="Xot-ng-Y5i"/>
-                            <constraint firstItem="rRB-ZY-YMN" firstAttribute="top" secondItem="ZM3-ce-rxj" secondAttribute="bottom" constant="10" id="Yj2-hw-rhT"/>
-                            <constraint firstItem="rRB-ZY-YMN" firstAttribute="leading" secondItem="Wnr-1U-ceF" secondAttribute="leading" id="eKe-gT-RxU"/>
-                            <constraint firstItem="rRB-ZY-YMN" firstAttribute="trailing" secondItem="Wnr-1U-ceF" secondAttribute="trailing" id="fBH-A9-28j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OPI-EG-Gg6" secondAttribute="trailing" constant="3" id="7eu-t1-oDa"/>
+                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="leading" secondItem="DQb-SG-PRY" secondAttribute="leadingMargin" id="BCg-Tr-zss"/>
+                            <constraint firstItem="Mm8-jd-MIh" firstAttribute="top" secondItem="DlB-o5-4pX" secondAttribute="bottom" constant="276" id="NIo-bo-9gU"/>
+                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="top" secondItem="Wnr-1U-ceF" secondAttribute="bottom" constant="8" symbolic="YES" id="TDF-FS-tn5"/>
+                            <constraint firstItem="DlB-o5-4pX" firstAttribute="trailing" secondItem="OPI-EG-Gg6" secondAttribute="trailing" id="VpD-0a-PWS"/>
+                            <constraint firstItem="fyO-Fd-ftk" firstAttribute="top" secondItem="ZM3-ce-rxj" secondAttribute="bottom" constant="70" id="bGl-0s-Bem"/>
+                            <constraint firstItem="DlB-o5-4pX" firstAttribute="top" secondItem="OPI-EG-Gg6" secondAttribute="bottom" constant="8" symbolic="YES" id="hEv-F9-N9e"/>
+                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="top" secondItem="DQb-SG-PRY" secondAttribute="top" constant="212" id="mxp-7h-ENQ"/>
+                            <constraint firstItem="fyO-Fd-ftk" firstAttribute="centerX" secondItem="Wnr-1U-ceF" secondAttribute="centerX" id="qD2-e0-Tgt"/>
+                            <constraint firstItem="Wnr-1U-ceF" firstAttribute="top" secondItem="ZM3-ce-rxj" secondAttribute="bottom" constant="90" id="umf-gB-H5G"/>
+                            <constraint firstItem="OPI-EG-Gg6" firstAttribute="top" secondItem="fyO-Fd-ftk" secondAttribute="bottom" constant="57" id="xdZ-qu-rWS"/>
+                            <constraint firstItem="DlB-o5-4pX" firstAttribute="leading" secondItem="OPI-EG-Gg6" secondAttribute="leading" id="xfg-ET-i9W"/>
+                            <constraint firstItem="Wnr-1U-ceF" firstAttribute="centerX" secondItem="DQb-SG-PRY" secondAttribute="centerX" id="zxb-Mm-znK"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Yj2-hw-rhT"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Add Document" id="dal-to-wHw">
+                    <navigationItem key="navigationItem" title="Add/Convert Document" id="dal-to-wHw">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mfY-pF-dci">
                             <connections>
                                 <action selector="cancel:" destination="XXK-DD-Amo" id="Q6e-bJ-963"/>
@@ -150,13 +152,13 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="fileNameTextField" destination="OPI-EG-Gg6" id="LPC-dM-1E7"/>
-                        <outlet property="inputTextView" destination="6Tt-el-bwz" id="Ih6-M1-SNv"/>
+                        <outlet property="inputTextView" destination="DlB-o5-4pX" id="VNQ-8X-r9h"/>
                         <outlet property="languagePickerView" destination="Wnr-1U-ceF" id="rWe-bw-qAk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXm-D1-FSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2614" y="315"/>
+            <point key="canvasLocation" x="2612" y="191"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="7jY-kP-X2N">

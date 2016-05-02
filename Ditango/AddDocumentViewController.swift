@@ -12,7 +12,7 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
 
     @IBOutlet weak var languagePickerView: UIPickerView!
     
-    @IBOutlet weak var inputTextView: UITextView!
+    @IBOutlet weak var inputTextView: UITextField!
     
     @IBOutlet weak var fileNameTextField: UITextField!
     
@@ -60,7 +60,7 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
         let text = inputTextView.text
         let language = pickerData[languagePickerView.selectedRowInComponent(0)]
         print(language)
-        api.uploadText(text, documentName: documentName!, locale: languageDict[language]!, completion:updateAfterCompletion)
+        api.uploadText(text!, documentName: documentName!, locale: languageDict[language]!, completion:updateAfterCompletion)
         cancel(sender)
     }
     

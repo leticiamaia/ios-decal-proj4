@@ -14,6 +14,18 @@ class DocumentsTableViewController: UITableViewController {
     let api = DitangoAPI()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        let contextImage = UIImage(named: "bg2.jpg")
+        
+        let size = contextImage?.size
+        let rect = CGRectMake((size?.width)!/2.5, 0 , (size?.width)!, (size?.height)!)
+        let imageRef: CGImageRef = CGImageCreateWithImageInRect(contextImage!.CGImage, rect)!
+        let image: UIImage = UIImage(CGImage: imageRef, scale: contextImage!.scale, orientation: contextImage!.imageOrientation)
+        backgroundImage.image = image
+        
+        self.view.insertSubview(backgroundImage, atIndex: 0)
+        backgroundImage.contentMode = UIViewContentMode.ScaleAspectFill
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

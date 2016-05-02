@@ -15,6 +15,8 @@
 		925837EE1CD5C6FA0018A505 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 925837ED1CD5C6FA0018A505 /* play.png */; };
 		925837F21CD69E9E0018A505 /* logoDitango.png in Resources */ = {isa = PBXBuildFile; fileRef = 925837F11CD69E9E0018A505 /* logoDitango.png */; };
 		925837F41CD6A9060018A505 /* logoDitango2.png in Resources */ = {isa = PBXBuildFile; fileRef = 925837F31CD6A9060018A505 /* logoDitango2.png */; };
+		925837F61CD6B0E40018A505 /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 925837F51CD6B0E40018A505 /* bg2.jpg */; };
+		925837F81CD6B1C00018A505 /* ditangoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 925837F71CD6B1C00018A505 /* ditangoIcon.png */; };
 		92E5E8061CD33F13004AC0EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8051CD33F13004AC0EF /* AppDelegate.swift */; };
 		92E5E8081CD33F13004AC0EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5E8071CD33F13004AC0EF /* ViewController.swift */; };
 		92E5E80B1CD33F13004AC0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E5E8091CD33F13004AC0EF /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		925837ED1CD5C6FA0018A505 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		925837F11CD69E9E0018A505 /* logoDitango.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoDitango.png; sourceTree = "<group>"; };
 		925837F31CD6A9060018A505 /* logoDitango2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoDitango2.png; sourceTree = "<group>"; };
+		925837F51CD6B0E40018A505 /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
+		925837F71CD6B1C00018A505 /* ditangoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ditangoIcon.png; sourceTree = "<group>"; };
 		92E5E8021CD33F13004AC0EF /* Ditango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ditango.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E5E8051CD33F13004AC0EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E5E8071CD33F13004AC0EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		92E5E8041CD33F13004AC0EF /* Ditango */ = {
 			isa = PBXGroup;
 			children = (
+				925837F71CD6B1C00018A505 /* ditangoIcon.png */,
 				925837F31CD6A9060018A505 /* logoDitango2.png */,
 				925837F11CD69E9E0018A505 /* logoDitango.png */,
 				925837ED1CD5C6FA0018A505 /* play.png */,
@@ -130,6 +135,7 @@
 				925837E51CD5C5270018A505 /* PlayerViewController.swift */,
 				92E5E8351CD34159004AC0EF /* DocumentsTableViewCell.swift */,
 				92E5E80C1CD33F13004AC0EF /* Assets.xcassets */,
+				925837F51CD6B0E40018A505 /* bg2.jpg */,
 				92E5E80E1CD33F13004AC0EF /* LaunchScreen.storyboard */,
 				92E5E8111CD33F13004AC0EF /* Info.plist */,
 				92E5E8331CD34085004AC0EF /* DocumentsTableViewController.swift */,
@@ -263,6 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E5E8101CD33F13004AC0EF /* LaunchScreen.storyboard in Resources */,
+				925837F81CD6B1C00018A505 /* ditangoIcon.png in Resources */,
+				925837F61CD6B0E40018A505 /* bg2.jpg in Resources */,
 				92E5E80D1CD33F13004AC0EF /* Assets.xcassets in Resources */,
 				925837EC1CD5C6DE0018A505 /* pause.png in Resources */,
 				925837F21CD69E9E0018A505 /* logoDitango.png in Resources */,
