@@ -57,11 +57,20 @@ class AddDocumentViewController: UIViewController,  UIPickerViewDelegate, UIPick
     
     @IBAction func saveDocumentAction(sender: AnyObject) {
         let documentName = fileNameTextField.text
-        let text = inputTextView.text
-        let language = pickerData[languagePickerView.selectedRowInComponent(0)]
-        print(language)
-        api.uploadText(text!, documentName: documentName!, locale: languageDict[language]!, completion:updateAfterCompletion)
-        cancel(sender)
+        
+        if(!(documentName?.containsString(" "))!) {
+          let text = inputTextView.text
+          let language = pickerData[languagePickerView.selectedRowInComponent(0)]
+          print(language)
+          api.uploadText(text!, documentName: documentName!, locale: languageDict[language]!, completion:updateAfterCompletion)
+          cancel(sender)
+        } else {
+            let alert = UIAlertView()
+            alert.title = "Error"
+            alert.message = "The file name can not have any spaces."
+            alert.addButtonWithTitle("Dismiss")
+            alert.show()
+        }
     }
     
     func updateAfterCompletion() {
